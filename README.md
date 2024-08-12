@@ -28,8 +28,8 @@ Este projeto pode ser aplicado em diversas situações:
   * [Pré-Requisitos](#pré-requisitos)
   * [Configuração de Ambiente](#configuração-de-ambiente)
 * [Roadmap](#roadmap)
-  * [História do Next.js](#história-do-next.js)
-  * [O que é Next.js?](#o-que-é-next.js)
+  * [História do Next.js](#história-do-next)
+  * [O que é Next.js?](#o-que-é-next)
   * [Passo 3](#step-3)
   * [Passo 4](#step-4)
 * [Contato](#contato)
@@ -53,7 +53,7 @@ Siga com precisão as orientações de configuração do ambiente para assegurar
 
 
 ## Roadmap
-### História do Next.js
+### História do Next
 
 O desenvolvimento front-end evoluiu com o tempo, e uma das grandes inovações recentes é o Next.js. Ele é um framework para React que facilita a criação de aplicações web completas e otimizadas.
 
@@ -63,23 +63,23 @@ Antes do Next.js, a construção de aplicações React envolvia configurar manua
 - Configuração Manual: Necessidade de configurar roteamento e otimizações manualmente.
 - Desafios com SEO: Aplicações React geralmente enfrentam dificuldades com SEO, pois o conteúdo é carregado no cliente.
 
-#### 🚀 A Solução: Next.js
+#### 🚀 A Solução: Next
 
 Next.js resolve esses problemas oferecendo uma solução pronta para construir aplicações React com recursos avançados, como:
 - Renderização no Lado do Servidor (SSR): Melhora o SEO e o tempo de carregamento inicial.
 - Gerenciamento de Rotas Automático: Facilita a criação de páginas e a navegação.
 - Otimização Automática: Inclui otimização de performance e divisão de código por padrão.
 
-#### ✅ Benefícios do Next.js
+#### ✅ Benefícios do Next
 - Otimização de Performance: Divisão de código automática e otimização de imagens.
 - Estabilidade Visual: Garantia de uma experiência de usuário consistente com renderização do lado do servidor e renderização estática.
 - Carregamento Rápido de Página: Melhoria no tempo de carregamento com pré-renderização e geração de páginas estáticas.
 
-### O que é Next.js?
+### O que é Next?
 
 Next.js é um framework para React que permite criar aplicações web com funcionalidades avançadas de forma simples e eficiente. Desenvolvido pela Vercel, ele é ideal para construir sites rápidos, escaláveis e otimizados para SEO.
 
-#### 🎯 Objetivo do Next.js
+#### 🎯 Objetivo do Next
 
 O Next.js visa facilitar a criação de aplicações web otimizadas, permitindo:
 
