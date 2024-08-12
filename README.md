@@ -28,8 +28,8 @@ Este projeto pode ser aplicado em diversas situações:
   * [Pré-Requisitos](#pré-requisitos)
   * [Configuração de Ambiente](#configuração-de-ambiente)
 * [Roadmap](#roadmap)
-  * [Passo 1](#step-1---inicialização-do-projeto-com-spring-initializr)
-  * [Passo 2](#step-2---configuração-do-projeto-e-migrações-com-flyway)
+  * [História do Next.js](#historia-do-next.js)
+  * [O que é Next.js?](#o-que-e-next.js)
   * [Passo 3](#step-3)
   * [Passo 4](#step-4)
 * [Contato](#contato)
@@ -53,91 +53,33 @@ Siga com precisão as orientações de configuração do ambiente para assegurar
 
 
 ## Roadmap
- ### STEP 1 - Título do Passo
-1. **Explicação**
-
-
-2. **Explicação**
-   - Explicação
-   - Explicação
-
-
-3. **Explicação**
-   - Explicação
-
-
-4. **Explicação** 
-
-
-5. **Explicação**
-    - Explicação
-
-
-### STEP 2 - Título do Passo
-1. **Explicação**
-
-
-2. **Explicação**
-    - Explicação
-    - Explicação
-
-![imagem](img.png)
-
-3. **Explicação**
-  - 
-
-
-  - 
-
-
-  
-
-![img.png](img.png)
-
-4. **Explicação**
-
-  - 
-
-
-  - 
-
-
-
-5. **Explicação**
-  - 
-
- ![img.png](img.png)
-
-  - .
-    - .
-   
-## História do Desenvolvimento Front-End com Next.js
+### História do Next.js
 
 O desenvolvimento front-end evoluiu com o tempo, e uma das grandes inovações recentes é o Next.js. Ele é um framework para React que facilita a criação de aplicações web completas e otimizadas.
 
-### 🌐 O início
+#### 🌐 O início
 
 Antes do Next.js, a construção de aplicações React envolvia configurar manualmente o roteamento, o gerenciamento de estado e a Otimização de Motor de Busca (SEO). Isso resultava em:
 - Configuração Manual: Necessidade de configurar roteamento e otimizações manualmente.
 - Desafios com SEO: Aplicações React geralmente enfrentam dificuldades com SEO, pois o conteúdo é carregado no cliente.
 
-### 🚀 A Solução: Next.js
+#### 🚀 A Solução: Next.js
 
 Next.js resolve esses problemas oferecendo uma solução pronta para construir aplicações React com recursos avançados, como:
 - Renderização no Lado do Servidor (SSR): Melhora o SEO e o tempo de carregamento inicial.
 - Gerenciamento de Rotas Automático: Facilita a criação de páginas e a navegação.
 - Otimização Automática: Inclui otimização de performance e divisão de código por padrão.
 
-### ✅ Benefícios do Next.js
+#### ✅ Benefícios do Next.js
 - Otimização de Performance: Divisão de código automática e otimização de imagens.
 - Estabilidade Visual: Garantia de uma experiência de usuário consistente com renderização do lado do servidor e renderização estática.
 - Carregamento Rápido de Página: Melhoria no tempo de carregamento com pré-renderização e geração de páginas estáticas.
 
-## O que é Next.js?
+### O que é Next.js?
 
 Next.js é um framework para React que permite criar aplicações web com funcionalidades avançadas de forma simples e eficiente. Desenvolvido pela Vercel, ele é ideal para construir sites rápidos, escaláveis e otimizados para SEO.
 
-### 🎯 Objetivo do Next.js
+#### 🎯 Objetivo do Next.js
 
 O Next.js visa facilitar a criação de aplicações web otimizadas, permitindo:
 
@@ -145,10 +87,9 @@ O Next.js visa facilitar a criação de aplicações web otimizadas, permitindo:
 - Gerenciamento de Rotas: Automatiza a criação de rotas com base na estrutura de arquivos.
 - Otimização de Performance: Oferece suporte a recursos como pré-carregamento de páginas e otimização de imagens.
 
-### 🔍 Exemplo Prático: Web-Tech
+#### 🔍 Exemplo Prático: Web-Tech
 
 Vamos explorar a criação de uma página usando Next.js para entender melhor como ele funciona:
-
 
 web-tech-page/ <br>
 ├── public/ <br>
