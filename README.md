@@ -225,6 +225,9 @@ SearchPage.getInitialProps = ({ query }) => {
 Mariana Almeida - [marianaalmeidafga@gmail.com](mailto:marianaalmeidafga@gmail.com).
 GitHub: [github.com/marialmeida1](https://github.com/marialmeida1)
 
+Nilson Deon Cordeiro Filho - [nilsondeon01@gmail.com](mailto:nilsondeon01@gmail.com@gmail.com).
+GitHub: [github.com/NilsonDeon](https://github.com/NilsonDeon)
+
 ## License
 
 Este projeto é licenciado sob a [Nome da Licença](URL da Licença) - veja o arquivo [LICENSE.md](LICENSE.md) para mais detalhes.
