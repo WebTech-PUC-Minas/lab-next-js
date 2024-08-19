@@ -220,11 +220,10 @@ SearchPage.getInitialProps = ({ query }) => {
 - Uso de Estilos: Utilize CSS Modules para estilizar componentes de forma modular.
 - Gerenciamento de Dados: Use getStaticProps e getServerSideProps para buscar dados de forma eficiente.
 
-
 ## Contato
-Seu nome - [seuemail@gmail.com](mailto:seuemail@gmail.com).
 
-GitHub: [github.com/seuUser](https://github.com/seuUser)
+Mariana Almeida - [marianaalmeidafga@gmail.com](mailto:marianaalmeidafga@gmail.com).
+GitHub: [github.com/marialmeida1](https://github.com/marialmeida1)
 
 ## License
 
