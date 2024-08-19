@@ -82,17 +82,45 @@ O Next.js visa facilitar a criação de aplicações web otimizadas, permitindo:
 
 No Next.js, você pode estilizar sua aplicação de diversas maneiras. As principais opções incluem:
 
-- CSS Modules: Utilizando módulos de CSS, você pode garantir que o escopo dos estilos seja isolado a um componente específico. Os arquivos de estilo são nomeados com a extensão `.module.css`.
+1. CSS Modules:
+CSS Modules permitem que você escreva CSS que é escopado para um componente específico, evitando conflitos de nomes e garantindo que os estilos sejam aplicados apenas ao componente desejado.
+
+- Crie um arquivo CSS com o sufixo .module.css. Por exemplo, `Button.module.css`.
+```
+// Button.module.css
+.primary {
+  background-color: blue;
+  color: white;
+}
+```
+- Importe o arquivo CSS no componente onde os estilos serão aplicados.
+- Aplique os estilos usando a sintaxe `styles.nomeDaClasse`.
 
 ```
+// Button.js
 import styles from './Button.module.css';
 
 function Button() {
   return <button className={styles.primary}>Click me</button>;
 }
+
+export default Button;
 ```
-- Styled Components: Integração com bibliotecas como `styled-components` para definir estilos diretamente no JavaScript.
+
+2. Styled Components:
+   
+styled-components é uma biblioteca que permite definir estilos diretamente no código JavaScript, criando componentes estilizados com sintaxe similar ao CSS.
+
+- Instale a biblioteca
+  
 ```
+npm install styled-components
+```
+
+- Crie componentes estilizados diretamente usando a função `styled`.
+
+```
+// Button.js
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -102,8 +130,20 @@ const Button = styled.button`
 
 export default Button;
 ```
-- Global Styles: Adicionando estilos globais com um arquivo `.css` importado no arquivo `_app.js`.
+
+3. Global Styles: 
+
+Para aplicar estilos globais, você pode criar um arquivo CSS e importá-lo no arquivo `_app.js`. Isso garante que os estilos sejam aplicados a toda a aplicação.
+
 ```
+// styles/globals.css
+body {
+  font-family: Arial, sans-serif;
+}
+```
+
+```
+// _app.js
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
@@ -112,10 +152,14 @@ function MyApp({ Component, pageProps }) {
 
 export default MyApp;
 ```
+
 #### Otimização
 Next.js oferece várias otimizações que ajudam a melhorar a performance da sua aplicação:
 
-- Otimização de Imagens: O componente `next/image` oferece carregamento automático de imagens responsivas e otimizadas.
+1. Otimização de Imagens:
+
+O componente `next/image` é otimizado para fornecer imagens responsivas e carregadas de forma eficiente. Ele garante que as imagens sejam carregadas apenas quando necessário e são redimensionadas automaticamente para diferentes tamanhos de tela.
+
 ```
 import Image from 'next/image';
 
@@ -125,7 +169,11 @@ function HomePage() {
 
 export default HomePage;
 ```
-- Otimização de Links: O componente `next/link` permite o carregamento antecipado das páginas, melhorando a navegação.
+
+2. Otimização de Links:
+
+O componente `next/link` melhora a navegação pré-carregando as páginas vinculadas para que a troca entre páginas seja mais rápida.
+
 ```
 import Link from 'next/link';
 
@@ -139,25 +187,61 @@ function HomePage() {
 
 export default HomePage;
 ```
-- Otimização de Fontes: Utilizando o `next/font`, você pode carregar fontes de forma eficiente e otimizada.
+
+3. Otimização de Fontes:
+
+Utilize o `next/font` para carregar fontes de forma eficiente, garantindo que elas sejam otimizadas e carregadas apenas quando necessário.
+
+```
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+
+function HomePage() {
+  return <div className={inter.className}>Hello World</div>;
+}
+
+export default HomePage;
+```
+
 #### Roteamento
-O roteamento em Next.js é baseado no sistema de arquivos, o que facilita a criação de páginas e layouts aninhados:
-- Rotas Simples: Colocando um arquivo about.js em `pages/`, você cria automaticamente uma rota `/about`.
-- Rotas Aninhadas: Você pode criar layouts aninhados organizando os arquivos em subpastas.
+
+O Next.js usa o sistema de arquivos para gerenciamento de rotas, o que simplifica a criação de páginas e navegação:
+
+1. Rotas Simples:
+Crie um arquivo com o nome da rota desejada dentro da pasta `pages/`. O nome do arquivo corresponde à URL da página.
+
+```
+// pages/about.js
+export default function About() {
+  return <div>About Page</div>;
+}
+```
+
+2. Rotas Aninhadas:
+
+Organize os arquivos em subpastas para criar rotas aninhadas e layouts complexos.
+
 ```
 // pages/blog/index.js
 export default function BlogHomePage() {
   return <div>Welcome to the Blog</div>;
 }
+```
 
+```
 // pages/blog/[slug].js
 export default function BlogPost({ params }) {
-  return <div>{params.slug}</div>;
+  return <div>Post: {params.slug}</div>;
 }
 ```
 #### Busca de Dados
-Next.js suporta várias formas de buscar dados:
-- getStaticProps: Para renderização estática.
+O Next.js oferece diferentes métodos para buscar dados dependendo da necessidade de renderização estática ou dinâmica:
+
+1. getStaticProps:
+
+Para páginas que não mudam frequentemente, você pode usar `getStaticProps` para gerar as páginas estaticamente durante a construção.
+   
 ```
 export async function getStaticProps() {
   const res = await fetch('https://api.github.com/repos/vercel/next.js');
@@ -172,7 +256,11 @@ export default function Repo({ repo }) {
   return <div>{repo.name}</div>;
 }
 ```
-- getServerSideProps: Para renderização no lado do servidor.
+
+2. getServerSideProps: 
+
+Para páginas que precisam de dados atualizados a cada requisição, use `getServerSideProps` para renderizar a página no lado do servidor.
+
 ```
 export async function getServerSideProps() {
   const res = await fetch('https://api.github.com/repos/vercel/next.js');
@@ -187,10 +275,15 @@ export default function Repo({ repo }) {
   return <div>{repo.name}</div>;
 }
 ```
-- SWC: Integração com bancos de dados hospedados no Vercel e boas práticas para busca e streaming de dados.
+
 #### Busca e Paginação
-Você pode implementar busca e paginação utilizando parâmetros de busca na URL:
+
+Você pode implementar a busca e a paginação utilizando parâmetros de URL para filtrar e navegar entre os dados.
+
 ```
+// pages/search.js
+import { useState, useEffect } from 'react';
+
 export default function SearchPage({ searchTerm, page }) {
   const [data, setData] = useState([]);
 
@@ -213,12 +306,85 @@ SearchPage.getInitialProps = ({ query }) => {
     page: query.page || 1,
   };
 };
+
 ```
+### Prática
+
+1. Configuração do Projeto
+
+Primeiro, crie um novo projeto Next.js se ainda não tiver um. Você pode fazer isso usando o comando:
+
+```
+npx create-next-app@latest github-repo-viewer
+```
+
+Navegue para o diretório do projeto:
+
+```
+cd github-repo-viewer
+```
+
+2. Criação da Página
+
+Vamos criar uma página que mostra informações sobre um repositório do GitHub. Crie um novo arquivo chamado repo.js dentro da pasta pages/.
+
+```
+import { useState } from 'react';
+
+// Função para buscar dados do repositório do GitHub
+async function fetchRepoData(owner, repo) {
+  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+  if (!res.ok) {
+    throw new Error('Failed to fetch repository data');
+  }
+  return res.json();
+}
+
+// Componente da página
+export default function Repo({ repo }) {
+  const [data, setData] = useState(repo);
+
+  return (
+    <div>
+      <h1>{data.name}</h1>
+      <p><strong>Description:</strong> {data.description}</p>
+      <p><strong>Stars:</strong> {data.stargazers_count}</p>
+      <p><strong>Forks:</strong> {data.forks_count}</p>
+      <p><strong>Language:</strong> {data.language}</p>
+      <a href={data.html_url} target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    </div>
+  );
+}
+
+// Função para obter dados do repositório no lado do servidor
+export async function getServerSideProps(context) {
+  const { owner = 'vercel', repo = 'next.js' } = context.query;
+
+  try {
+    const repoData = await fetchRepoData(owner, repo);
+    return { props: { repo: repoData } };
+  } catch (error) {
+    return { props: { repo: null } };
+  }
+}
+```
+
+3. Testando a Página
+
+Para testar a página, execute o projeto com:
+
+```
+npm run dev
+```
+
+Abra o navegador e vá para http://localhost:3000/ Você deve ver informações sobre o repositório do Next.js.
+
 ### Boas Práticas
 
 - Organização de Componentes: Organize os componentes por funcionalidade.
 - Uso de Estilos: Utilize CSS Modules para estilizar componentes de forma modular.
 - Gerenciamento de Dados: Use getStaticProps e getServerSideProps para buscar dados de forma eficiente.
+
 
 ## Contato
 
@@ -231,4 +397,3 @@ GitHub: [github.com/NilsonDeon](https://github.com/NilsonDeon)
 ## License
 
 Este projeto é licenciado sob a [Nome da Licença](URL da Licença) - veja o arquivo [LICENSE.md](LICENSE.md) para mais detalhes.
-
