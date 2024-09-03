@@ -87,7 +87,7 @@ No Next.js, você pode estilizar sua aplicação de diversas maneiras. As princi
 CSS Modules permitem que você escreva CSS que é escopado para um componente específico, evitando conflitos de nomes e garantindo que os estilos sejam aplicados apenas ao componente desejado.
 
 - Crie um arquivo CSS com o sufixo .module.css. Por exemplo, `Button.module.css`.
-``` jsx
+```css
 // Button.module.css
 .primary {
   background-color: blue;
@@ -97,7 +97,7 @@ CSS Modules permitem que você escreva CSS que é escopado para um componente es
 - Importe o arquivo CSS no componente onde os estilos serão aplicados.
 - Aplique os estilos usando a sintaxe `styles.nomeDaClasse`.
 
-``` jsx
+```jsx
 // Button.js
 import styles from './Button.module.css';
 
@@ -114,13 +114,13 @@ styled-components é uma biblioteca que permite definir estilos diretamente no c
 
 - Instale a biblioteca
   
-``` bash
+```bash
 npm install styled-components
 ```
 
 - Crie componentes estilizados diretamente usando a função `styled`.
 
-``` jsx
+```jsx
 // Button.js
 import styled from 'styled-components';
 
@@ -136,14 +136,14 @@ export default Button;
 
 Para aplicar estilos globais, você pode criar um arquivo CSS e importá-lo no arquivo `_app.js`. Isso garante que os estilos sejam aplicados a toda a aplicação.
 
-``` jsx
+```css
 // styles/globals.css
 body {
   font-family: Arial, sans-serif;
 }
 ```
 
-``` jsx
+```jsx
 // _app.js
 import '../styles/globals.css';
 
@@ -163,7 +163,7 @@ Agora que você aprendeu as diferentes maneiras de estilizar sua aplicação Nex
 - Crie um arquivo de estilos `Card.module.css` com a classe `.card` que define um fundo cinza claro, borda arredondada e um padding de 20px.
 - Importe o `Card.module.css` no seu componente `Card.js` e aplique os estilos usando `className`.
 
-```jsx
+```css
    // Card.module.css
    .card {
      background-color: #f0f0f0;
@@ -218,7 +218,7 @@ export default Button;
 
 - Crie um arquivo `globals.css` na pasta `styles/` e defina estilos básicos para a sua aplicação, como o estilo do corpo da página, fontes, e margens padrões.
   
-```jsx
+```css
 /* styles/globals.css */
 body {
   margin: 0;
@@ -306,7 +306,7 @@ Nesta seção, você vai praticar algumas das principais otimizações oferecida
    - Configure as imagens para serem responsivas utilizando as propriedades `layout="responsive"` e ajuste o `width` e `height` conforme necessário.
 
 
-   ```jsx
+```jsx
    // pages/Gallery.js
    import Image from 'next/image';
 
