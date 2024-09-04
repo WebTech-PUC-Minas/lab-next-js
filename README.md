@@ -86,7 +86,7 @@ No Next.js, você pode estilizar sua aplicação de diversas maneiras. As princi
 1. CSS Modules:
 CSS Modules permitem que você escreva CSS que é escopado para um componente específico, evitando conflitos de nomes e garantindo que os estilos sejam aplicados apenas ao componente desejado.
 
-- Crie um arquivo CSS com o sufixo .module.css. Por exemplo, `Button.module.css`.
+- Crie um arquivo CSS com o sufixo .module. Por exemplo, `Button.module.css`.
 ```css
 // Button.module.css
 .primary {
