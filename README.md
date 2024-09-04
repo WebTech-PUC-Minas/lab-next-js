@@ -212,7 +212,7 @@ const Button = styled.button`
 
 export default Button;
 ```
-> Não se esqueca de instalar o biblioteca `styled-components`.
+> Não se esqueca de instalar a biblioteca `styled-components`.
 
 3. Global Styles:
 
