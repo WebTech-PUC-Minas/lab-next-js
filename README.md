@@ -84,6 +84,7 @@ O Next.js visa facilitar a criação de aplicações web otimizadas, permitindo:
 No Next.js, você pode estilizar sua aplicação de diversas maneiras. As principais opções incluem:
 
 1. CSS Modules:
+   
 CSS Modules permitem que você escreva CSS que é escopado para um componente específico, evitando conflitos de nomes e garantindo que os estilos sejam aplicados apenas ao componente desejado.
 
 - Crie um arquivo CSS com o sufixo .module. Por exemplo, `Button.module.css`.
